@@ -1,0 +1,23 @@
+http://ctest.cdn.nintendo.net {
+    header Cache-Control "max-age=0, no-cache, no-store"
+    header Content-Type text/plain
+    header Pragma no-cache
+    header X-Organization Nintendo
+    respond "ok"
+}
+
+http://conntest.nintendowifi.net {
+    header Content-Type text/html
+    header Connection Keep-Alive
+    header X-Organization Nintendo
+    respond `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html>
+	<head>
+	<title>HTML Page</title>
+	</head>
+	<body bgcolor="#FFFFFF">
+	This is test.html page
+	</body>
+	</html>
+	`
+}

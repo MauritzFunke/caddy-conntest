@@ -1,0 +1,13 @@
+services:
+  caddy:
+    build: .
+    restart: unless-stopped
+    # Expose the container directly
+    ports:
+      - 80:80
+    # If you use networks and this is behind a reverse proxy comment the ports part and uncomment the following and replace mynetwork with the proxy network
+#    networks:
+#      - mynetwork
+#networks:
+#  mynetwork:
+#    external: true
